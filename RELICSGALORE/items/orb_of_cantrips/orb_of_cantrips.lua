@@ -28,7 +28,7 @@ function HandleDamage(infos, damage)
 
 	if infos.entity.IsEnemy() then
 	
-		
+		if math.random(1,8) == 1 then
             local choice = math.random(1,3)
             if choice == 1 then
 			infos.entity.applyEffect(damageType.POISON, damage * 1.3 + 2)
@@ -39,9 +39,9 @@ function HandleDamage(infos, damage)
             if choice == 3 then
             pickup.StartLuaCoroutine(FreezeRoutine, infos.entity, 1.5) 
             end
-        
+        end
         return infos.damage
-end
+end 
 end
 	function FreezeRoutine(entity, duration)
 	local timer = 0
