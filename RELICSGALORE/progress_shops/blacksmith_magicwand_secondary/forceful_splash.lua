@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-	progress.name = "Forceful words"
+	progress.name = "Forceful Splash"
 	progress.desc = "tome sweep deal major knockback and increases crit chance"
 	progress.price = 1
 	progress.currency = "beastblood"
