@@ -4,7 +4,7 @@ function ADVR.onLoad()
     pickup.weight = 50
     pickup.maxAmount = 1
     pickup.amountUses = 1
-    pickup.price = 60
+    pickup.price = 50
     pickup.tier = 3
     pickup.spawnsIn = {relicPool.SPECIAL, relicPool.SHOP, relicPool.BOSS}
     pickup.supportedInMultiplayer = true
@@ -14,7 +14,7 @@ end
 function ADVR.onPickup()
     pickup.RegisterItem()
     player.PrimaryDamage.RegisterMultiplier(pickup.id, -.6)
-    player.SecondaryDamageDamage.RegisterMultiplier(pickup.id, -.6)
+    player.SecondaryDamage.RegisterMultiplier(pickup.id, -.6)
     player.PrimaryCritChance.RegisterMultiplier(pickup.id, -.6)
     player.SecondaryCritChance.RegisterMultiplier(pickup.id, -.6)
     player.EvasionChance.RegisterMultiplier(pickup.id, -.6)
