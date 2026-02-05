@@ -1,7 +1,7 @@
 function ADVR.onLoad()
     progress.name = "photinic arrow"
     progress.desc = "damage is decreased but arrow returns instantly no matter what"
-	progress.price = 4
+	progress.price = 5
 	progress.currency = "beastblood"
 	progress.postObjectSpawnListeners = {game.GetObjectMapping(objects.EFFECT_EXPLOSION_CROSSBOWBOLT)}
 	HitEnemy = nil

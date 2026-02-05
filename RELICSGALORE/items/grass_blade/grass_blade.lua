@@ -10,9 +10,15 @@ function ADVR.onLoad()
 	pickup.supportedInMultiplayer = true
 end
 
+
+
+function ADVR.onPickupProxies(originalPlayerRef)
+	ColorTrail(originalPlayerRef)
+end 
+
 function ADVR.onPickup()
 	pickup.RegisterItem()
-
+	ColorTrail(player.LocalPlayerRef)
 	-- do nothing when using blue blood
 	if game.itemInterpreter.AmountPickupFoundByLocalPlayer(relics.VIAL_OF_BLUE_BLOOD) > 0 then
 		return
@@ -36,5 +42,9 @@ function ADVR.onPickup()
 	
 
 	
+end
+function ColorTrail(playerRef)
+	helperMethods.SetTrailColorRanged(playerRef, colors.Create(0.000, 1.000, 0.000, 0.102))
+
 end
 
