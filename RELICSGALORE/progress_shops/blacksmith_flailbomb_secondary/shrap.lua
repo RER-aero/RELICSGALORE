@@ -7,7 +7,7 @@ end
 
 function ADVR.ProgressEvents.onBuy()
 end
-function ADVR.onDungeonGenerated()
+function ADVR.onDungeonGenerated(worldGenerator)
 	if helperMethods.IsInFirstDungeon(worldGenerator) then
 game.inventory.currentPrimaryWeapon.AsFlailBombBase().bomb.explosionRadius = 0
 game.inventory.currentPrimaryWeapon.AsFlailBombBase().bomb.explosionParticles.transform.localscale = 0
