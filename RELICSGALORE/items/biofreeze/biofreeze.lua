@@ -1,6 +1,6 @@
 function ADVR.onLoad()
 	pickup.name = "Biofreeze"
-    pickup.desc = "A Critical hits freeze enemies for a few seconds"
+    pickup.desc = "A Critical hits have a chance to freeze enemies for a few seconds"
 	pickup.weight = 50
 	pickup.maxAmount = 1
 	pickup.price = 4
@@ -14,6 +14,7 @@ pickup.RegisterItem()
 end
 
 function ADVR.onSecondaryHitEntity(infos)
+	if helperMethods.IsValidWithLuck(-20, 100) then
 	if infos.entity ~= nil and infos.entity.IsEnemy() then
 		
              if infos.isCritical and infos.entity.IsEnemy() then
@@ -21,15 +22,17 @@ function ADVR.onSecondaryHitEntity(infos)
     end
 
     end
+end
     return infos.damage
 end
 function ADVR.onPrimaryHitEntity(infos)
+	if helperMethods.IsValidWithLuck(-20, 100) then
 	if infos.entity ~= nil and infos.entity.IsEnemy() then
 		
              if infos.isCritical and infos.entity.IsEnemy() then
         pickup.StartLuaCoroutine(FreezeRoutine, infos.entity, 3)
     end
-
+	end	
     end
     return infos.damage
 end
