@@ -8,7 +8,7 @@ end
 function ADVR.ProgressEvents.onBuy()
 end
 function ADVR.onDungeonGenerated()
-    player.PrimaryCritChance.RegisterAddMult(progress.id, 1, 1.5)
+    player.PrimaryCritChance.RegisterAddend(progress.id, .25)
 end
 
 
