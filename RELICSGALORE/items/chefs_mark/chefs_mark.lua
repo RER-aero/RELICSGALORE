@@ -12,7 +12,6 @@ end
 
 function ADVR.onPickup()
 pickup.RegisterItem()
-
 end
 function ADVR.onPickupActivate()
 local food = game.SpawnObjectNetwork(objects.ITEM_APPLE, game.playerController.rightHand.transform.position)

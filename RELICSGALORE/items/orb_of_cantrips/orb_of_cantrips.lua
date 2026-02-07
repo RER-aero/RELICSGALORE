@@ -3,7 +3,7 @@ function ADVR.onLoad()
     pickup.desc = "attacks have a chance to apply either, fire, freeze, or poison"
 	pickup.weight = 35
 	pickup.maxAmount = 1
-	pickup.price = 80
+	pickup.price = 65
 	pickup.tier = 3
 	pickup.spawnsIn = {relicPool.SPECIAL, relicPool.SHOP, relicPool.SECRET}
 	pickup.supportedInMultiplayer = true
@@ -28,7 +28,7 @@ function HandleDamage(infos, damage)
 
 	if infos.entity.IsEnemy() then
 	
-		if math.random(1,8) == 1 then
+		if math.random(1,5) == 1 then
             local choice = math.random(1,3)
             if choice == 1 then
 			infos.entity.applyEffect(damageType.POISON, damage * 1.3 + 2)

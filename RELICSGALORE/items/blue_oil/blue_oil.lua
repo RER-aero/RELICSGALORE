@@ -19,7 +19,7 @@ function ADVR.onPickup()
 	ProbabilityDragonfruitReplace = 0.0
 end
 function ADVR.onPickupProxies(originalPlayerRef)
-	pickup.RegisterItem()
+	pickup.RegisterItemNoSync()
     ProbabilityPotatoReplace = 0.8
 	ProbabilityAppleReplace = 0.2
 	ProbabilitySteakReplace = 0.0

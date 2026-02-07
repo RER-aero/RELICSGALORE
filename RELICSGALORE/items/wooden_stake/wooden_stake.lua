@@ -31,3 +31,9 @@ function ADVR.onPlayerHit(damage, damageSource, receivedDamageType, hitPosition,
     player.SecondaryDamage.RegisterAddend(pickup.id, -2)
 	return damage
 end
+
+function ADVR.onPlayerDeath(playerLiving)
+	pickup.UnregisterItem()
+	player.PrimaryDamage.ClearAddend(pickup.id)
+	player.SecondaryDamage.ClearAddend(pickup.id)
+end

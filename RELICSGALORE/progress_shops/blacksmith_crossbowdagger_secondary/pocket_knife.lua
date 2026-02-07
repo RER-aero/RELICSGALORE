@@ -9,6 +9,8 @@ function ADVR.ProgressEvents.onBuy()
 end
 
 function ADVR.onDungeonGenerated(dungeon)
+	if helperMethods.IsInFirstDungeon(worldGenerator) then
 	game.inventory.currentSecondaryWeapon.AsSwordBase().bladeCreator.transform.localScale = vector3.__new(.8, .6, 1)
 	player.SecondaryCritChance.RegisterMultiplier(progress.id, 1.2)
+	end
 end

@@ -4,7 +4,7 @@ function ADVR.onLoad()
     pickup.desc = "swaps primary and secondary damage"
 	pickup.weight = 55
 	pickup.maxAmount = 1
-	pickup.price = 35
+	pickup.price = 30
 	pickup.tier = 2
 	pickup.spawnsIn = {relicPool.CHEST, relicPool.GOLDEN_CHEST, relicPool.SHOP, relicPool.BOSS, relicPool.PODEST}
 	pickup.supportedInMultiplayer = true

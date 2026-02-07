@@ -11,11 +11,11 @@ function ADVR.ProgressEvents.onBuy()
 end
 
 function ADVR.onDungeonGenerated(dungeon)
-	
+	if helperMethods.IsInFirstDungeon(worldGenerator) then
     player.PrimaryDamage.RegisterAddend(progress.id, -3)
 	game.inventory.currentPrimaryWeapon.AsCrossbowBase().bolt.spawnExplosion = false
 	game.inventory.currentPrimaryWeapon.AsCrossbowBase().bolt.dealDirectHitDamage = true
 	game.inventory.currentPrimaryWeapon.AsCrossbowBase().bolt.delayUntilReturnToPlayer = 0
 	game.inventory.currentPrimaryWeapon.AsCrossbowBase().bolt.delayUntilReturnToPlayerMiss = 0
-
+	end
 end

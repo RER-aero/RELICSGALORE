@@ -8,7 +8,9 @@ end
 function ADVR.ProgressEvents.onBuy()
 end
 function ADVR.onDungeonGenerated()
+    if helperMethods.IsInFirstDungeon(worldGenerator) then
     player.PrimaryCritChance.RegisterAddend(progress.id, .25)
+    end
 end
 
 

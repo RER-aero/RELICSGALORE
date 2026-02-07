@@ -17,3 +17,4 @@ end
 function ADVR.onPickupActivate()
 player.Health = player.Health - 1
 end
+
