@@ -8,12 +8,12 @@ function ADVR.ProgressEvents.onBuy()
 end
 function ADVR.onDungeonGenerated(worldGenerator)
 	if helperMethods.IsInFirstDungeon(worldGenerator) then
-	game.inventory.currentSecondaryWeapon.AsMagicBookBase().SetMaxMana(2)
-    local NextManalevel = 3
+	game.inventory.currentSecondaryWeapon.AsMagicBookBase().SetMaxMana(1)
+    local NextManalevel = 1
     end
     
- if not helperMethods.IsInFirstDungeon(worldGenerator) then
+ NextManalevel = NextManalevel + 1 
     game.inventory.currentSecondaryWeapon.AsMagicBookBase().SetMaxMana(NextManalevel)
-     NextManalevel = NextManalevel + 1 
+    
 end
-end
+
