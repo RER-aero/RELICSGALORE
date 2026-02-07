@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Explosive compound"
-    pickup.desc = "Tome attacks cause an explosion, but melee damage is decreased"
+    pickup.desc = "Hitting enemies with your wand causes an explosion, but damage is decreased"
     pickup.supportedInMultiplayer = true
     game.RegisterForRPCEvents(pickup)
 
@@ -10,7 +10,7 @@ function ADVR.onPickup()
 end
 
 
-function ADVR.onMeleeWeaponCollide(tome, collision)
+function ADVR.onMeleeWeaponCollide(wand, collision)
 	-- special case for chests, which should just open naturally 
 	local living = collision.gameObject.GetComponent_LivingBase_()
 	if living ~= nil and string.find(living.livingId, "prop_chest_") then
@@ -19,10 +19,10 @@ function ADVR.onMeleeWeaponCollide(tome, collision)
 	end
 
 	if collision.relativeVelocity.magnitude > 2 then
-		local expl = game.SpawnObjectLocal(objects.EFFECT_EXPLOSION_SMALL, tome.transform.position).GetComponent_Explosion_()
+		local expl = game.SpawnObjectLocal(objects.EFFECT_EXPLOSION_SMALL, wand.transform.position).GetComponent_Explosion_()
 		expl.damage = player.GetSecondaryDamageWithPickupModifiers()
 		expl.enableCritChance = true
-		pickup.SendRPCEvent(1, tome.transform.position, rpcType.TO_PROXIES)
+		pickup.SendRPCEvent(1, wand.transform.position, rpcType.TO_PROXIES)
 	end
 end
 

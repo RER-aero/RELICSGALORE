@@ -9,7 +9,7 @@ function ADVR.onPickup()
     helperMethods.RegisterMeleeDamageAddMult(pickup.id, 1, -1.8)
 end
 
-function ADVR.onMeleeWeaponCollide(dagger, collision)
+function ADVR.onMeleeWeaponCollide(WTFDOIPUTHERE, collision)
 	-- special case for chests, which should just open naturally 
 	local living = collision.gameObject.GetComponent_LivingBase_()
 	if living ~= nil and string.find(living.livingId, "prop_chest_") then
@@ -18,10 +18,10 @@ function ADVR.onMeleeWeaponCollide(dagger, collision)
 	end
 
 	if collision.relativeVelocity.magnitude > 2 then
-		local expl = game.SpawnObjectLocal(objects.EFFECT_EXPLOSION_SMALL, player.Object.dagger.transform.position).GetComponent_Explosion_()
+		local expl = game.SpawnObjectLocal(objects.EFFECT_EXPLOSION_SMALL, player.Object.WTFDOPUTHERE_.transform.position).GetComponent_Explosion_()
 		expl.damage = player.GetSecondaryDamageWithPickupModifiers()
 		expl.enableCritChance = true
-		pickup.SendRPCEvent(1, player.Object.dagger.transform.position, rpcType.TO_PROXIES)
+		pickup.SendRPCEvent(1, player.Object.swor.transform.position, rpcType.TO_PROXIES)
 	end
 end
 
