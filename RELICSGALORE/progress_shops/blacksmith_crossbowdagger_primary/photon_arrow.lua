@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-    progress.name = "photinic arrow"
+    progress.name = "Photinic Arrow"
     progress.desc = "damage is decreased but arrow returns instantly no matter what"
 	progress.price = 5
 	progress.currency = "beastblood"
