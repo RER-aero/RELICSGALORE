@@ -1,12 +1,12 @@
 function ADVR.onLoad()
     pickup.name = "Messengers Brand"
 	pickup.name = "Spend coins to dash"
-	pickup.weight = 50
+	pickup.weight = 45
 	pickup.maxAmount = 1
 	pickup.amountUses = 9999
 	pickup.tier = 2
-	pickup.price = 34
-	pickup.spawnsIn = {relicPool.BOSS}
+	pickup.price = 39
+	pickup.spawnsIn = {relicPool.BOSS, relicPool.SHOP}
 	pickup.isActivateItem = true
 	pickup.supportedInMultiplayer = true
     BrandCost = 8
