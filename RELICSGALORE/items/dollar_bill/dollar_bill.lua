@@ -13,12 +13,12 @@ end
 
 function ADVR.onPickup()
 	pickup.RegisterItem()
-    	player.ShopDiscount.RegisterAddend(pickup.id, 1.3)
+    	player.ShopDiscount.RegisterAddend(pickup.id, .3)
 		player.CurrentCash = player.CurrentCash + 20
 end
 
 function ADVR.onPickupProxies()
 	pickup.RegisterItemNoSync()
-    	player.ShopDiscount.RegisterAddend(pickup.id, 1.3)
+    	player.ShopDiscount.RegisterAddend(pickup.id, .3)
 end
 

@@ -40,8 +40,9 @@ function HandleDamage(infos, damage)
             pickup.StartLuaCoroutine(FreezeRoutine, infos.entity, 1.5) 
             end
         end
-        return infos.damage
+        
 end 
+return infos.damage
 end
 	function FreezeRoutine(entity, duration)
 	local timer = 0
