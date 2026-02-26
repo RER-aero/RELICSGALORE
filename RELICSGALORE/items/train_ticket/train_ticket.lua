@@ -1,8 +1,8 @@
 function ADVR.onLoad()
     pickup.name = "Train Ticket"
     pickup.desc = "A random stat is increased and another is decreased after each floor"
-	pickup.weight = 100
-	pickup.maxAmount = 1
+	pickup.weight = 98
+	pickup.maxAmount = 4
 	pickup.amountUses = -1
 	pickup.tier = 1
 	pickup.price = 20
