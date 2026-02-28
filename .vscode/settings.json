@@ -1,6 +1,7 @@
 {
     "Lua.workspace.library": [
-        "/home/rer/.vscode/extensions/erthugames.advr-modding-tools-0.1.810/lua-definitions/library"
+        "/home/rer/.vscode/extensions/erthugames.advr-modding-tools-0.1.810/lua-definitions/library",
+        "/home/rer/.vscode/extensions/erthugames.advr-modding-tools-0.1.941/lua-definitions/library"
     ],
     "Lua.diagnostics.globals": [
         "IsStringInList"
