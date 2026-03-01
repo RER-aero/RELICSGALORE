@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Messengers Brand"
-	pickup.name = "Spend coins to dash"
+	pickup.desc = "Spend coins to dash"
 	pickup.weight = 45
 	pickup.maxAmount = 1
 	pickup.amountUses = 9999

@@ -1,6 +1,6 @@
 function ADVR.onLoad()
 	pickup.name = "Gluttons Brand"
-	pickup.name = "Spend coins to deal a small bit of damage to nearby enemies"
+	pickup.desc = "Spend coins to deal a small bit of damage to nearby enemies"
 	pickup.weight = 65
 	pickup.maxAmount = 1
 	pickup.amountUses = 9999

@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Ascetics Brand"
-	pickup.name = "Spend coins to increase a random stat"
+	pickup.desc = "Spend coins to increase a random stat"
 	pickup.weight = 50
 	pickup.maxAmount = 1
 	pickup.amountUses = 9999
