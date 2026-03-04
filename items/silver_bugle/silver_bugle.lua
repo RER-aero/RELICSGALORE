@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-    pickup.name = "Silver bugle"
+    pickup.name = "Silver Bugle"
     pickup.desc = "defeating a boss spawns in many wisps"
 	pickup.weight = 40
 	pickup.maxAmount = 3
