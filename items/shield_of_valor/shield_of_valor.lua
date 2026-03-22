@@ -1,5 +1,4 @@
-function ADVR.onLoad()
-    pickup.name = "Shield of Valor"
+function ADVR.onLoad()    pickup.name = "Shield of Valor"
     pickup.desc = "Gain 3 protection hearts but loose all evasion"
 	pickup.weight = 40
 	pickup.maxAmount = 2
@@ -15,6 +14,8 @@ function ADVR.onPickup()
 	if player.Health <= 0 then
 		return
 	end
-	player.Heal(6, player.GetBaseEtherealHeartType())
-    player.EvasionChance = 0
+	game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE).Execute("ADVR.onPickup")	
+	game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE).Execute("ADVR.onPickup")	
+	game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE).Execute("ADVR.onPickup")	
+    player.EvasionChance.RegisterMultiplier(pickup.id, 0)
 end
