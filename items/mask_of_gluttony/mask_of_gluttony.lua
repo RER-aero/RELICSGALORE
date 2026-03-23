@@ -29,8 +29,8 @@ function ADVR.onPickup()
 	}
 
 end
-function ADVR.onFoodEaten(itemFood)
-  local props = FoodProperties[itemFood.name]
+function ADVR.onFoodEaten(food)
+  local props = FoodProperties[food.livingBase.livingID]
 if props then
 		 NumberOfUpgrades = props.upgrades
 end
