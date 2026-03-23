@@ -4,11 +4,7 @@ function ADVR.onLoad()
     pickup.supportedInMultiplayer = true
     game.RegisterForRPCEvents(pickup)
 
-function ADVR.onPickup()
-    pickup.RegisterItem()
-    helperMethods.RegisterMeleeDamageAddMult(pickup.id, 1, -1.8)
 end
-
 
 function ADVR.onMeleeWeaponCollide(bomb, collision)
 	-- special case for chests, which should just open naturally 
@@ -31,5 +27,4 @@ function ADVR.onRPCReceived(eventID, sourcePlayer, position)
 		local expl = game.SpawnObjectLocal(objects.EFFECT_EXPLOSION_SMALL, position).GetComponent_Explosion_()
 		expl.damage = 0
 	end
-end
 end

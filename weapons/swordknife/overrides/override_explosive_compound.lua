@@ -3,10 +3,6 @@ function ADVR.onLoad()
     pickup.desc = "Melee attacks cause an explosion, but melee damage is decreased"
     pickup.supportedInMultiplayer = true
     game.RegisterForRPCEvents(pickup)
-
-function ADVR.onPickup()
-    pickup.RegisterItem()
-    helperMethods.RegisterMeleeDamageAddMult(pickup.id, 1, -1.8)
 end
 
 
@@ -31,5 +27,4 @@ function ADVR.onRPCReceived(eventID, sourcePlayer, position)
 		local expl = game.SpawnObjectLocal(objects.EFFECT_EXPLOSION_SMALL, position).GetComponent_Explosion_()
 		expl.damage = 0
 	end
-end
 end

@@ -12,4 +12,11 @@ function ADVR.onLoad()
 end
 
 
+function ADVR.onPickup()
+    pickup.RegisterItem()
+    helperMethods.RegisterMeleeDamageAddMult(pickup.id, 1, -1.8)
+end
+
+
+
    
