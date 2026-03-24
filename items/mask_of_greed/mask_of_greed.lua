@@ -6,7 +6,7 @@ function ADVR.onLoad()
     pickup.amountUses = -1
     pickup.price = 35
     pickup.tier = 2
-    pickup.spawnsIn = {relicPool.CHEST, relicPool.SHOP, relicPool.PODEST}
+    pickup.spawnsIn = {relicPool.CHEST, relicPool.SHOP, relicPool.SACRIFICE}
     pickup.supportedInMultiplayer = true
 end
 
