@@ -16,11 +16,12 @@ end
 
 function ADVR.onRoomEntered()
 Enemies = game.GetEnemiesInRadius(10, player.transform.position, true, false)
+Dih = #Enemies
 end
 function ADVR.onPrimaryHitEntity(infos)
-    return infos.damage + math.ceil(Enemies * 1.25)
+    return infos.damage + math.ceil(Dih * 1.25)
 end
 
 function ADVR.onSecondaryHitEntity(infos)
-    return infos.damage + math.ceil(Enemies * 1.25)
+    return infos.damage + math.ceil(Dih * 1.25)
 end
