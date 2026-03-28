@@ -15,6 +15,6 @@ helperMethods.RegisterRangedDamageAddend(pickup.id, 5)
 end
 
 function ADVR.onPickupActivate()
-player.Health = player.Health - 1
+player.DamagePlayer(1, false)
 end
 
