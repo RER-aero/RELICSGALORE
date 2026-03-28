@@ -14,12 +14,13 @@ function ADVR.onPickup()
     pickup.RegisterItem()
 end
 
+function ADVR.onRoomEntered()
+Enemies = game.GetEnemiesInRadius(10, player.transform.position, true, false)
+end
 function ADVR.onPrimaryHitEntity(infos)
-    local enemies = game.GetEnemiesInRadius(32, player.transform.position, true, true)
-    return infos.damage + (enemies * 1.25)
+    return infos.damage + math.ceil(Enemies * 1.25)
 end
 
 function ADVR.onSecondaryHitEntity(infos)
-    local enemies = game.GetEnemiesInRadius(32, player.transform.position, true, true)
-    return infos.damage + (enemies * 1.25)
+    return infos.damage + math.ceil(Enemies * 1.25)
 end
