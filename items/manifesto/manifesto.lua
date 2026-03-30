@@ -22,6 +22,6 @@ end
 
 
 function ADVR.onPickupTaken(takenPickup)
-player.PrimaryDamage = player.PrimaryDamage + 1
-player.SecondaryDamage = player.SecondaryDamage + 1
+player.PrimaryDamage.RegisterAddend(pickup.id, 2)
+player.SecondaryDamage.RegisterAddend(pickup.id, 2)
 end

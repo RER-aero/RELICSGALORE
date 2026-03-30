@@ -10,10 +10,7 @@ function ADVR.onLoad()
     pickup.supportedInMultiplayer = true
 end
 
-function ADVR.onPickup()
-    pickup.RegisterItem()
-    player.MaxHealth = player.MaxHealth - 1
-end
+
   function ADVR.onLoad()
     pickup.name = "Mask Of Temperance"
     pickup.desc = "Loose a heart container, but eating food at low health or throwing it away increases crit chance"
@@ -45,6 +42,7 @@ function ADVR.onPickup()
 	}
 
 end
+
 function ADVR.onFoodEaten(food)
   local item = FoodProperties[food.livingBase.livingId]
 if player.RealHealth - item.upgrades == 1 then

@@ -39,5 +39,5 @@ local result = helperMethods.ChangeRandomPlayerStatSlightly(pickup.id, 1)
 	game.ShowMessageInWorld("<color=#289407>" .. result .. "</color>", 4)
 end
 
-
 end
+
