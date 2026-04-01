@@ -30,7 +30,7 @@ end
 function ChainHit(originalTarget, weapon, hitPosition)
 	if originalTarget ~= nil and weapon ~= nil then
 		local enemies = game.GetLivingInRadius(6, originalTarget.transform.position, false)
-		for i = 0, enemies.Length - 1 do
+		for i = 0, #enemies - 1 do
 			local enemy = enemies[i]
 			if enemy ~= nil and enemy.IsEnemy() and enemy ~= originalTarget and enemy.Health > 0 then
 				enemy.DoHit(
