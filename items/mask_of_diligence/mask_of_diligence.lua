@@ -6,7 +6,7 @@ function ADVR.onLoad()
     pickup.amountUses = -1
     pickup.price = 35
     pickup.tier = 2
-    pickup.spawnsIn = {relicPool.CHEST, relicPool.SECRET, relicPool.SACRIFICE}
+    pickup.spawnsIn = { relicPool.CHEST, relicPool.SECRET, relicPool.SACRIFICE }
     pickup.supportedInMultiplayer = true
 end
 
@@ -16,8 +16,6 @@ function ADVR.onPickup()
 end
 
 function ADVR.onEnteredNGPlus()
-player.EvasionChance.RegisterAddend(pickup.id, 0.1)
-player.CurrentCash = player.currentCash + 20
+    player.EvasionChance.RegisterAddend(pickup.id, 0.1)
+    player.CurrentCash = player.currentCash + 20
 end
-
-

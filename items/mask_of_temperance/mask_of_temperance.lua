@@ -11,18 +11,6 @@ function ADVR.onLoad()
 end
 
 
-  function ADVR.onLoad()
-    pickup.name = "Mask Of Temperance"
-    pickup.desc = "Loose a heart container, but eating food at low health or throwing it away increases crit chance"
-    pickup.weight = 55
-    pickup.maxAmount = 1
-    pickup.amountUses = -1
-    pickup.price = 35
-    pickup.tier = 2
-    pickup.spawnsIn = {relicPool.SECRET, relicPool.BOSS, relicPool.SACRIFICE}
-    pickup.supportedInMultiplayer = true
-end
-
 function ADVR.onPickup()
     pickup.RegisterItem()
     player.MaxHealth = player.MaxHealth - 1

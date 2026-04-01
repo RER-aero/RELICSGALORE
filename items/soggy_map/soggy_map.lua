@@ -16,7 +16,5 @@ function ADVR.onPickup()
 end
 
 function ADVR.onRoomEntered(room)
-  if (room.type == roomTypes.ENEMY or room.type == roomTypes.CORRIDOR or room.type == roomTypes.SECRET or room.type == roomTypes.ITEM) then
         player.currentCash = player.currentCash + (3 * pickup.AmountActiveLocal())
-    end
 end

@@ -13,17 +13,17 @@ end
 function ADVR.onPickup()
     local hello = math.random(6)
  if hello == 1 then
-    game.itemInterpreter.GetItemById(relics.COVETOUS_HEART).Execute("ADVR.onPickup")	
+    player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.COVETOUS_HEART))
 elseif hello == 2 then
-    game.itemInterpreter.GetItemById(relics.WINSOME_HEART).Execute("ADVR.onPickup")	
+    player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.WINSOME_HEART))
 elseif hello == 3 then
-    game.itemInterpreter.GetItemById(relics.TORTURED_HEART).Execute("ADVR.onPickup")	
+   player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.TORTURED_HEART))
 elseif hello == 4 then
-    game.itemInterpreter.GetItemById(relics.IMPASSIONED_HEART).Execute("ADVR.onPickup")	
+   player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.IMPASSIONED_HEART))
 elseif hello == 5 then
-    game.itemInterpreter.GetItemById(relics.RESOLUTE_HEART).Execute("ADVR.onPickup")	
+ player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.RESOLUTE_HEART))
 else
-  game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE).Execute("ADVR.onPickup")	
+ player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE))	
 	
 end
 pickup.RegisterItem()

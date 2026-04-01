@@ -14,8 +14,8 @@ function ADVR.onPickup()
 	if player.Health <= 0 then
 		return
 	end
-	game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE).Execute("ADVR.onPickup")	
-	game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE).Execute("ADVR.onPickup")	
-	game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE).Execute("ADVR.onPickup")	
+	player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE))
+	player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE))
+	player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE))
     player.EvasionChance.RegisterMultiplier(pickup.id, 0)
 end

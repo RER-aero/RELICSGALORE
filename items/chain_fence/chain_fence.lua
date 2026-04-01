@@ -26,10 +26,7 @@ function ADVR.onRangedHitEntity(infos)
 
 	return infos.damage
 end
---this relic is ai generated
---gave claude the gamedata
---might train a model to make relics another time
---let this be a warning <3
+
 function ChainHit(originalTarget, weapon, hitPosition)
 	if originalTarget ~= nil and weapon ~= nil then
 		local enemies = game.GetLivingInRadius(6, originalTarget.transform.position, false)

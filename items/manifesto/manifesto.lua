@@ -13,15 +13,15 @@ end
 
 function ADVR.onPickup()
     pickup.RegisterItem()
-    player.PrimaryDamage.RegisterMultiplier(pickup.id, -.6)
-    player.SecondaryDamage.RegisterMultiplier(pickup.id, -.6)
-    player.PrimaryCritChance.RegisterMultiplier(pickup.id, -.6)
-    player.SecondaryCritChance.RegisterMultiplier(pickup.id, -.6)
-    player.EvasionChance.RegisterMultiplier(pickup.id, -.6)
+    player.PrimaryDamage.RegisterMultiplier(pickup.id, .6)
+    player.SecondaryDamage.RegisterMultiplier(pickup.id, .6)
+    player.PrimaryCritChance.RegisterMultiplier(pickup.id, .6)
+    player.SecondaryCritChance.RegisterMultiplier(pickup.id, .6)
+    player.EvasionChance.RegisterMultiplier(pickup.id, .6)
 end
 
 
-function ADVR.onPickupTaken(takenPickup)
+function ADVR.onPickupTaken()
 player.PrimaryDamage.RegisterAddend(pickup.id, 2)
 player.SecondaryDamage.RegisterAddend(pickup.id, 2)
 end
