@@ -20,7 +20,7 @@ function ADVR.onPlayerHit(damage, damageSource, receivedDamageType, hitPosition,
     end
 
     if damage > 0 then
-        player.MoveSpeed.RegisterAddend(pickup.id, 3)
+        player.MoveSpeed.RegisterAddend(pickup.id, 2.67) --6767676767676767676767676767 hahahahahahahah, why are you looking at the code go away
         pickup.CallFunctionIn("RemoveSpeed", 3)
     end
 
