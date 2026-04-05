@@ -17,7 +17,7 @@ end
 
 function ADVR.onWeaponHitEntity(infos)
 AddDmg = AddDmg + 1
-	return HandleDamage(infos, player.PrimaryDamage.GetValueFloat()) + AddDmg
+	return infos.damage + AddDmg
 end
 function ADVR.onEntityDeath(living, source)
  if living.IsEnemy() and source == player.LocalPlayerRef then
