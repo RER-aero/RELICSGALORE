@@ -18,6 +18,9 @@ function ADVR.onPickup()
 end
 
 function ADVR.onRoomEntered(room)
+      if  not TookDamageInRoom then
+        player.CurrentKeys = player.CurrentKeys + math.random(2, 5)
+    end
     TookDamageInRoom = false
 end
 
@@ -31,8 +34,3 @@ function ADVR.onPlayerHit(damage, damageSource, receivedDamageType, hitPosition,
     return damage
 end
 
-function ADVR.onEntityDeath(living, source)
-    if living.IsEnemy() and source == player.LocalPlayerRef and not TookDamageInRoom then
-        player.CurrentKeys = player.CurrentKeys + math.random(2, 5)
-    end
-end
