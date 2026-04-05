@@ -17,5 +17,6 @@ function ADVR.onPickup()
 	end
 	player.RemoveEtherealHealth(99)
 	player.Health = 1
-	player.Heal(2, player.GetBaseEtherealHeartType())
+	player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE))	
+	player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE))	
 end
