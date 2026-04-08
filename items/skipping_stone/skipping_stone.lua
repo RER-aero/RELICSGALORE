@@ -1,12 +1,12 @@
 
 function ADVR.onLoad()
     pickup.name = "Skipping Stone"
-    pickup.desc = "Increase stats, but taking relics will slow you down"
+    pickup.desc = "Moderately Increase stats, but taking relics will slow you down"
 	pickup.weight = 75
 	pickup.maxAmount = 1
 	pickup.amountUses = -1
 	pickup.price = 50
-	pickup.tier = 2
+	pickup.tier = 3
 	pickup.spawnsIn = {relicPool.SPECIAL, relicPool.BOSS}
 	pickup.supportedInMultiplayer = true
 end
