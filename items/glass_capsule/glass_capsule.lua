@@ -1,12 +1,12 @@
 function ADVR.onLoad()
     pickup.name = "Glass capsule"
     pickup.desc = "Gain half a protection heart"
-	pickup.weight = 0
-	pickup.maxAmount = 20
+	pickup.weight = 100
+	pickup.maxAmount = 10
 	pickup.tier = 1
 	pickup.amountUses = -1
 	pickup.price = 15
-	pickup.spawnsIn = {}
+	pickup.spawnsIn = {relicPool.GOLDEN_CHEST}
 	pickup.supportedInMultiplayer = true
 
 end
