@@ -1,7 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Tainted Lily"
-    pickup.desc =
-    "Gain 3 heart containers and a protection heart, but if you dont kill an enemy within a short time limit YOU DIE"
+    pickup.desc = "Gain 3 heart containers and a protection heart, but if you dont kill an enemy within a short time limit YOU DIE"
     pickup.weight = 30
     pickup.maxAmount = 1
     pickup.amountUses = -1
