@@ -19,5 +19,5 @@ function ADVR.onPickup()
 end
 
 function ADVR.onFoodEaten(food)
-	player.CurrentKeys = player.CurrentKeys + food.healAmount * 4 * pickup.AmountActiveLocal()
+	player.CurrentKeys = player.CurrentKeys + math.ceil(food.healAmount * 2.5) * pickup.AmountActiveLocal()
 end
