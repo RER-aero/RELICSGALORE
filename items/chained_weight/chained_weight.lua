@@ -12,7 +12,7 @@ end
 
 function ADVR.onPickup()
     pickup.RegisterItem()
-    player.MoveSpeed.RegisterAddend(pickup.id, .75)
+    player.MoveSpeed.RegisterAddend(pickup.id, -55)
     player.PrimaryDamage.RegisterMultiplier(pickup.id, 1.5)
     player.SecondaryDamage.RegisterMultiplier(pickup.id, 1.5)
 end
