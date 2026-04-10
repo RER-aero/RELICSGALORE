@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Scrying glass lens"
-    pickup.desc = "decreases your melee damage greatly, but melee hits have a chance to spawn food"
+    pickup.desc = "decreases your ranged damage greatly, but ranged hits have a chance to spawn food"
     pickup.weight = 50
     pickup.maxAmount = 1
     pickup.amountUses = 1
@@ -12,10 +12,10 @@ end
 
 function ADVR.onPickup()
     pickup.RegisterItem()
-    helperMethods.RegisterMeleeDamageMultiplier(pickup.id, .5)
+     helperMethods.RegisterRangedDamageMultiplier(pickup.id, .5)
 end
 
-function ADVR.onMeleeHitEntity(infos)
+function ADVR.onRangedHitEntity(infos)
     if infos.entity == nil then
 		return infos.damage
 	end
