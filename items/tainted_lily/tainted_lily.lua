@@ -17,6 +17,7 @@ end
 function ADVR.onPickup()
     pickup.RegisterItem()
     player.MaxHealth = player.MaxHealth + 6
+    player.Heal(6)
     player.AddEtherealHealth(2, game.itemInterpreter.GetItemById(relics.BELOVED_KEEPSAKE))
 end
 
