@@ -15,7 +15,7 @@ function ADVR.onPickup()
 end
 
 function ADVR.onRoomEntered()
-Enemies = game.GetEnemiesInRadius(10, player.transform.position, true, false)
+Enemies = game.GetEnemiesInRadius(15, player.transform.position, false, false)
 Dih = #Enemies
 end
 function ADVR.onPrimaryHitEntity(infos)
