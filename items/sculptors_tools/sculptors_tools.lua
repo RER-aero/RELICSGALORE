@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-    pickup.name = "Scrying glass lens"
+    pickup.name = "Sculptors tools"
     pickup.desc = "decreases your ranged damage greatly, but ranged hits have a chance to spawn food"
     pickup.weight = 50
     pickup.maxAmount = 1

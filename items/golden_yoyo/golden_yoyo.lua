@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Golden YoYo"
-    pickup.desc = "Gain extra scrying coins if you win this run"
+    pickup.desc = "Gain extra grand library coins if you win this run"
 	pickup.weight = 55
 	pickup.maxAmount = 3
 	pickup.amountUses = -1
