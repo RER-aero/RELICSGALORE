@@ -1,7 +1,7 @@
 function ADVR.onLoad()
     pickup.name = "Flower Crown"
     pickup.desc = "Each floor you complete permanently increases your max health"
-    pickup.weight = 40
+    pickup.weight = 75
     pickup.maxAmount = 1
     pickup.amountUses = -1
     pickup.price = 50

@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-	pickup.name = "Sweing MAchine"
+	pickup.name = "Sweing Machine"
     pickup.desc = "All of your current and future clothing related relics increase your melee damage by 1"
 	pickup.weight = 65
 	pickup.maxAmount = 1
