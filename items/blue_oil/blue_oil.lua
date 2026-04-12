@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-	pickup.name = "blue oil"
+	pickup.name = "Blue Oil"
     pickup.desc = "Increases the chance to find food, but higher tier food no longer spawns"
 	pickup.weight = 45
 	pickup.maxAmount = 1

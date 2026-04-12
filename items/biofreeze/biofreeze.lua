@@ -1,6 +1,6 @@
 function ADVR.onLoad()
 	pickup.name = "Biofreeze"
-    pickup.desc = "A Critical hits have a chance to freeze enemies for a few seconds"
+    pickup.desc = "Critical hits have a chance to freeze enemies for a few seconds"
 	pickup.weight = 50
 	pickup.maxAmount = 1
 	pickup.price = 4

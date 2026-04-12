@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Element bundle"
-    pickup.desc = "receive 4 random relics"
+    pickup.desc = "Receive 4 random relics"
 	pickup.weight = 88
 	pickup.maxAmount = 3
 	pickup.amountUses = -1

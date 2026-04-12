@@ -1,6 +1,6 @@
 function ADVR.onLoad()
 	pickup.name = "Chefs Mark"
-    pickup.desc = "When used, spawn a randome food item"
+    pickup.desc = "When used, spawn a random food item"
 	pickup.weight = 70
 	pickup.maxAmount = 1
 	pickup.price = 30

@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-    pickup.name = "dirty Monocle"
+    pickup.name = "Dirty Monocle"
     pickup.desc = "Moderately increases stats but you can no longer view relic descriptions in advance"
 	pickup.weight = 70
 	pickup.maxAmount = 1
