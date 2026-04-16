@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-	pickup.name = "Bronze chime"
+	pickup.name = "Bronze Chime"
     pickup.desc = "Critical strikes spawn a wisp"
 	pickup.weight = 50
 	pickup.maxAmount = 1
