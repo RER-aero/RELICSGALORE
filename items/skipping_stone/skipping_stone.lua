@@ -24,6 +24,6 @@ end
 
 
 function ADVR.onPickupTaken(takenPickup)
-	player.MoveSpeed.RegisterAddend(pickup.id, -10)
+	player.MoveSpeed.RegisterAddend(pickup.id, -.05)
 
 end
