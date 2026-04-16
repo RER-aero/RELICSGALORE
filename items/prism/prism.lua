@@ -51,15 +51,16 @@ function ADVR.onEntityDeath(livingBaseReference, sourceReference, lastDamageType
     -- If the food ID was found in the table, update the values
     if props.heal == 3 then
         game.SpawnObjectNetwork(objects.ITEM_FOOD_APPLE, game.playerController.rightHand.transform.position)
-        game.SpawnObjectNetwork(objects.ITEM_FOOD_APPLE, game.playerController.rightHand.transform.position)
-        game.SpawnObjectNetwork(objects.ITEM_FOOD_APPLE, game.playerController.rightHand.transform.position)
+        game.SpawnObjectNetwork(objects.ITEM_FOOD_STEAK, game.playerController.rightHand.transform.position)
     elseif props.heal == 2 then
         game.SpawnObjectNetwork(objects.ITEM_FOOD_APPLE, game.playerController.rightHand.transform.position)
-        game.SpawnObjectNetwork(objects.ITEM_FOOD_APPLE, game.playerController.rightHand.transform.position)
+        game.SpawnObjectNetwork(objects.ITEM_FOOD_PLUM, game.playerController.rightHand.transform.position)
     elseif props.heal == 1 then
         game.SpawnObjectNetwork(objects.ITEM_FOOD_BEET, game.playerController.rightHand.transform.position)
         game.SpawnObjectNetwork(objects.ITEM_FOOD_POTATO, game.playerController.rightHand.transform.position)
-    else
+    elseif props.heal < 1 then
         game.SpawnObjectNetwork(objects.ITEM_FOOD_YAM, game.playerController.rightHand.transform.position)
+    else
+         game.SpawnObjectNetwork(objects.ITEM_FOOD_YAM, game.playerController.rightHand.transform.position)
     end
 end
