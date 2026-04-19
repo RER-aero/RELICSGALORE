@@ -1,8 +1,8 @@
 function ADVR.onLoad()
 	pickup.name = "Charm Of a Newlywed"
 	pickup.desc = "Gain two heart containers"
-	pickup.weight = 85
-	pickup.tier = 2
+	pickup.weight = 45
+	pickup.tier = 3
 	pickup.maxAmount = 2
 	pickup.amountUses = -1
 	pickup.price = 45

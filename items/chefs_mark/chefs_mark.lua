@@ -19,7 +19,7 @@ function ADVR.onPickupActivate()
 	local epstein = math.random(4)
 	local food = game.SpawnObjectNetwork(objects.ITEM_FOOD_POTATO, game.playerController.rightHand.transform.position)
 	if epstein == 1 then
- food = game.SpawnObjectNetwork(objects.ITEM_APPLE, game.playerController.rightHand.transform.position)
+ food = game.SpawnObjectNetwork(objects.ITEM_FOOD_APPLE, game.playerController.rightHand.transform.position)
 	elseif epstein == 2 then
  food = game.SpawnObjectNetwork(objects.ITEM_FOOD_STEAK, game.playerController.rightHand.transform.position)
 	elseif epstein == 3 then

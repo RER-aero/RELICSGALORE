@@ -10,10 +10,6 @@ function ADVR.onLoad()
 	pickup.supportedInMultiplayer = true
 end
 
-function ADVR.onPickup()
-	pickup.RegisterItem()
-	player.MaxHealth = player.MaxHealth - 1
-
 	FoodProperties = {
 		[objects.ITEM_FOOD_DRAGONFRUIT] = { upgrades = 3 },
 		[objects.ITEM_FOOD_STEAK]       = { upgrades = 2 },
@@ -27,6 +23,11 @@ function ADVR.onPickup()
 		[objects.ITEM_FOOD_BEET]        = { upgrades = 0 },
 		[objects.ITEM_FOOD_PLUM]        = { upgrades = 1 },
 	}
+	
+function ADVR.onPickup()
+	pickup.RegisterItem()
+	player.MaxHealth = player.MaxHealth - 1
+
 end
 
 function ADVR.onFoodEaten(food)

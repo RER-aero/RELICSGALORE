@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-    pickup.name = "Mask Of wrath"
+    pickup.name = "Mask Of Wrath"
     pickup.desc = "Loose a heart container, but every evaded attack increases one of your weapons damage slightly, your damage goes up slightly"
     pickup.weight = 55
     pickup.maxAmount = 1

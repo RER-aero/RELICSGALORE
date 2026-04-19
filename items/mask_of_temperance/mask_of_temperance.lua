@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-    pickup.name = "Mask Of Gluttony"
+    pickup.name = "Mask Of Temperance"
     pickup.desc = "Loose a heart container, but eating food when at low health or throwing food away increases crit chance"
     pickup.weight = 55
     pickup.maxAmount = 1

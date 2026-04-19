@@ -17,9 +17,9 @@ end
 
 
 function ADVR.onAfterBossAreaGenerated(worldGenerator)
-	if KilledBoss == false and not player.isDead then
+
        local result = helperMethods.ChangeRandomPlayerStatsSlightlyUnique(pickup.id, 2)
 	game.ShowMessageInWorld("<color=#289407>" .. result .. "</color>", 4)
-		KilledBoss = true
-	end
+
+	
 end
