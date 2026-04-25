@@ -12,8 +12,8 @@ end
 
 function ADVR.onPickup()
 	pickup.RegisterItem()
-	helperMethods.RegisterRangedDamageAddend(pickup.id, 12)
-    local damage = helperMethods.GetMeleeDamageStat * -1
+	helperMethods.RegisterRangedDamageAddend(pickup.id, 10)
+    local damage = helperMethods.GetRangedCritStat() * -1
     helperMethods.RegisterRangedCritAddend(pickup.id, damage)
     
 end

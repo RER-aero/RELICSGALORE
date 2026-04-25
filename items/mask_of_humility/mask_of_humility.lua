@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Mask Of Humility"
-    pickup.desc = "Loose a heart container, but getting has a chance to reward you"
+    pickup.desc = "Loose a heart container, but getting hit has a chance to reward you"
     pickup.weight = 55
     pickup.maxAmount = 1
     pickup.amountUses = -1
