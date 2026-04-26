@@ -36,11 +36,11 @@ function ADVR.onRunComplete()
 end
 
 function Tick()
-    if Timer < 21 then
+    if Timer < 21  and Timer > 0 then
     game.ShowMessageInWorld("tainted death incoming: "..tostring(Timer), 1)
     end
     Timer = Timer - 1
     if Timer <= 0 then
-        player.DamagePlayer(6767, false)
+        player.DamagePlayer(2, false)
     end
 end
