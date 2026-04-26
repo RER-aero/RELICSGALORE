@@ -15,7 +15,7 @@ function ADVR.onPickup()
 end
 
 function ADVR.onPlayerValueChanged(statID)
-    if statID == "EtherealHealth" then
+    if statID == playerValues.ETHEREAL_HEALTH then
         player.EvasionChance.RegisterAddend(pickup.id, .015)
     end
 end

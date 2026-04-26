@@ -13,12 +13,11 @@ end
 function ADVR.onPickup()
     pickup.RegisterItem()
     player.MaxHealth = player.MaxHealth - 1
-    Lastheart = player.MaxHealth
+   
 end
 
-function ADVR.onGlobalTick()
-if player.MaxHealth > LastHeart then
-     LastHeart = player.MaxHealth
+function ADVR.onPlayerValueChanged(statID)
+if statID == playerValues.MAX_HEALTH then
      player.EvasionChance.RegisterAddend(pickup.id, .02)
 end
 
