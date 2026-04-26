@@ -11,13 +11,12 @@ function ADVR.onLoad()
 end
 
 function ADVR.onPickup()
-    local hello = math.random(2)
-    if hello == 1 then
+  
+    if helperMethods.IsValidWithLuck(.50,.50,.50) then
 	player.MaxHealth = player.MaxHealth + 2
 	player.Health = player.Health + 2
-end
-    if hello == 2 then
-    	player.MaxHealth = player.MaxHealth - 2
+	else
+    player.MaxHealth = player.MaxHealth - 2
 end
 
 	pickup.RegisterItem()

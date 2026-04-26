@@ -7,18 +7,15 @@ function ADVR.onLoad()
     pickup.price = 35
     pickup.tier = 2
     pickup.spawnsIn = { relicPool.SECRET, relicPool.SACRIFICE, relicPool.SPECIAL }
-    pickup.supportedInMultiplayer = true
 end
 
 function ADVR.onPickup()
     pickup.RegisterItem()
     player.MaxHealth = player.MaxHealth - 1
-    Lastheart = player.EtherealHealth
 end
 
-function ADVR.onGlobalTick()
-    if player.EtherealHealth > LastHeart then
-        LastHeart = player.EtherealHealth
+function ADVR.onPlayerValueChanged(statID)
+    if statID == "EtherealHealth" then
         player.EvasionChance.RegisterAddend(pickup.id, .015)
     end
 end

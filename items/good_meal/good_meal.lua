@@ -22,5 +22,11 @@ function ADVR.onPickup()
 end
 
 function ADVR.onAfterBossAreaGenerated()
+      
+	player.PrimaryDamage.ClearAddend(pickup.id)
+    player.PrimaryCritChance.ClearAddend(pickup.id)
+      
+	player.SecondaryCritChance.ClearAddend(pickup.id)
+    player.SecondaryDamage.ClearAddend(pickup.id)
     pickup.UnregisterItem()
 end
