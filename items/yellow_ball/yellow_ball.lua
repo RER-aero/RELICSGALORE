@@ -2,7 +2,7 @@ function ADVR.onLoad()
     pickup.name = "Yellow Ball"
     pickup.desc = "Each room you complete without taking damage increases discount"
     pickup.weight = 55
-    pickup.maxAmount = 3
+    pickup.maxAmount = 1
     pickup.amountUses = -1
     pickup.price = 30
     pickup.tier = 2

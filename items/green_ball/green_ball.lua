@@ -1,8 +1,8 @@
 function ADVR.onLoad()
     pickup.name = "Green Ball"
-    pickup.desc = "Each room you complete without taking damage increases luck slightly"
+    pickup.desc = "Each room you complete without taking damage increases luck"
     pickup.weight = 55
-    pickup.maxAmount = 3
+    pickup.maxAmount = 2
     pickup.amountUses = -1
     pickup.price = 30
     pickup.tier = 2
