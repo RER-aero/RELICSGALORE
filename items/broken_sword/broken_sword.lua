@@ -11,6 +11,7 @@ function ADVR.onLoad()
 end
 
 function ADVR.onPickup()
+    pickup.RegisterItem()
 	helperMethods.RegisterRangedDamageAddend(pickup.id, -3)
     helperMethods.RegisterMeleeDamageAddend(pickup.id, 6)
 end

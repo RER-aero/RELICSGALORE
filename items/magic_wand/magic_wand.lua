@@ -1,13 +1,13 @@
 function ADVR.onLoad()
     pickup.name = "Magic Wand"
     pickup.desc = "Melee swings have a chance to release magic"
-    pickup.weight = 45
-    pickup.maxAmount = 3
+    pickup.weight = 65
+    pickup.maxAmount = 1
     pickup.price = 50
-    pickup.tier = 2
-    pickup.spawnsIn = { relicPool.SPECIAL, relicPool.SHOP, relicPool.BOSS }
+    pickup.tier = 3
+    pickup.spawnsIn = { relicPool.SPECIAL, relicPool.SACRIFICE, relicPool.BOSS }
     pickup.supportedInMultiplayer = true
-    pickup.isSharedItem = true
+   
 end
 
 function ADVR.onPickup()
