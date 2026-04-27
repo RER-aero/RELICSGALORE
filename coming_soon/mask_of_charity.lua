@@ -15,7 +15,7 @@ function ADVR.onPickup()
     player.MaxHealth = player.MaxHealth - 1
 end
 
-function ADVR.onScryingDonation() --please erthu i need this
+function ADVR.onPostscryingDonate() --please erthu i need this
     player.Luck.ClearAddend(pickup.id)
     player.Luck.RegisterAddend(pickup.id, math.floor(player.currentCash / 10) / 0.01)
 end
