@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Arcade Joystick"
-    pickup.desc = "A stat bonus rotates bewtween melee damage, melee crit, ranged damage, ranged crit on each hit."
+    pickup.desc = "A stat bonus rotates bewtween melee damage, melee crit, ranged damage, ranged crit on each attack."
     pickup.weight = 88
     pickup.maxAmount = 1
     pickup.amountUses = -1
