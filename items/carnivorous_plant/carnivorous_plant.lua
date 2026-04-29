@@ -8,7 +8,7 @@ function ADVR.onLoad()
 	pickup.tier = 3
 	pickup.spawnsIn = {relicPool.PODEST, relicPool.PODEST}
 	pickup.supportedInMultiplayer = true
-	pickup.globalTickDelay = 5
+	pickup.globalTickDelay = 3
 FoundEnemy = nil
 end
 
@@ -21,8 +21,8 @@ end
 function ADVR.onGlobalTick()
 
 	if FoundEnemy ~= nil then
-		audio.PlaySoundLocal(sounds.ITEM_FOOD_APPLE_EAT, FoundEnemy.transform.positon)
-		FoundEnemy.DoHit(player.networkObject, player.PrimaryDamage.GetValueFloat() * 4)
+		audio.PlaySoundLocal(sounds.ITEM_FOOD_APPLE_EAT, game.playerController.rightHand.transform.position)
+		FoundEnemy.DoHit(player.networkObject, player.PrimaryDamage.GetValueFloat() * 1.85)
         FoundEnemy = nil
 	else
 		local enemies = game.GetEnemiesInRadius(3, game.playerController.rightHand.transform.position, true, true)
