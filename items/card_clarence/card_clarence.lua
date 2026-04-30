@@ -13,8 +13,8 @@ end
 function ADVR.onPickup()
 	pickup.RegisterItem()
      helperMethods.ChangeRandomPlayerStatSlightly(pickup.id, 1)
-      helperMethods.ChangeRandomPlayerStatSlightly(pickup.id, 1.1)
+      helperMethods.ChangeRandomPlayerStatSlightly(pickup.id, 1)
        helperMethods.ChangeRandomPlayerStatSlightly(pickup.id, 1)
-        helperMethods.ChangeRandomPlayerStatSlightly(pickup.id, 1.1)
+        helperMethods.ChangeRandomPlayerStatSlightly(pickup.id, 1)
 
 end
