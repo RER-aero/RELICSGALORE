@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Protein Tubes"
-    pickup.desc = "With that white sauce (this relic has a weight of 1 and iss tier 3, pretty cool that you found it)"
+    pickup.desc = "With that white sauce (this relic has a weight of 1 and is tier 3, pretty cool that you found it)"
 	pickup.weight = 1
 	pickup.maxAmount = 1
 	pickup.tier = 3
@@ -14,7 +14,7 @@ end
 function ADVR.onPickup()
 	pickup.RegisterItem()
 
-	player.MaxHealth = player.MaxHealth + 10
+	player.MaxHealth = player.MaxHealth + 2
 	
 end
 
