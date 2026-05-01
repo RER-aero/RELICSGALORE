@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-    pickup.name = "Mask Of Greed"
+    pickup.name = "Mask Of Charity"
     pickup.desc = "Loose a heart container, but donating coins to the scrying glass or buying items increases luck"
     pickup.weight = 55
     pickup.maxAmount = 1
@@ -15,13 +15,12 @@ function ADVR.onPickup()
     player.MaxHealth = player.MaxHealth - 1
 end
 
-function ADVR.onPostscryingDonate() --please erthu i need this
+function ADVR.onPostScryingGlassDonation() --please erthu i need this
     player.Luck.ClearAddend(pickup.id)
-    player.Luck.RegisterAddend(pickup.id, math.floor(player.currentCash / 10) / 0.01)
+    player.Luck.RegisterAddend(pickup.id, .01)
 end
 function ADVR.onItemBought()
 
  player.Luck.ClearAddend(pickup.id)
-    player.Luck.RegisterAddend(pickup.id, math.floor(player.currentCash / 10) / 0.01)
-
+    player.Luck.RegisterAddend(pickup.id, .05)
 end
