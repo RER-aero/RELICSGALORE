@@ -12,7 +12,7 @@ end
 
 function ADVR.onPickup()
     pickup.RegisterItem()
-    player.MoveSpeed.RegisterAddend(pickup.id, .2)
+    player.MoveSpeed.RegisterMultiplier(pickup.id, 1.4)
     player.MaxHealth = player.MaxHealth - 2
 
 end
