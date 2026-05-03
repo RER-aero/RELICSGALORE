@@ -8,7 +8,7 @@ function ADVR.onLoad()
     pickup.tier = 3
     pickup.spawnsIn = { relicPool.SPECIAL, relicPool.SACRIFICE, relicPool.BOSS }
     pickup.supportedInMultiplayer = true
-
+pickup.isVanishItem = true
     
     Timer = 60
 end
@@ -43,4 +43,7 @@ function Tick()
     if Timer <= 0 then
         player.DamagePlayer(2, false)
     end
+end
+function ADVR.onPlayerDeath()
+pickup.UnregisterItem()
 end

@@ -9,11 +9,13 @@ function ADVR.onLoad()
     pickup.tier = 3
     pickup.spawnsIn = { relicPool.SPECIAL, relicPool.SACRIFICE, relicPool.BOSS }
     pickup.supportedInMultiplayer = true
-
+pickup.isVanishItem = true
     
     Timer = 95
 end
-
+function ADVR.onPlayerDeath()
+pickup.UnregisterItem()
+end
 function ADVR.onPickup()
     pickup.RegisterItem()
     player.MaxHealth = player.MaxHealth + 4
