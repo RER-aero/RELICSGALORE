@@ -3,7 +3,7 @@ function ADVR.onLoad()
     pickup.desc = "Increases ranged damage but using marks damages you"
 	pickup.weight = 35
 	pickup.maxAmount = 1
-	pickup.price = 35
+	pickup.price = 80
 	pickup.tier = 2
 	pickup.spawnsIn = {relicPool.SPECIAL, relicPool.SHOP, relicPool.BOSS}
 	pickup.supportedInMultiplayer = true

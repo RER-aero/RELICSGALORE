@@ -1,7 +1,7 @@
 function ADVR.onLoad()
 	pickup.name = "Iron Gum"
     pickup.desc = "Increases luck and evasion but eating food decreases a random stat"
-	pickup.weight = 35
+	pickup.weight = 65
 	pickup.maxAmount = 1
 	pickup.price = 35
 	pickup.tier = 2
