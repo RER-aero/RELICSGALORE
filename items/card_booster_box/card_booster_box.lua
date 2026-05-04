@@ -1,10 +1,10 @@
 function ADVR.onLoad()
-	pickup.name = "Booster Pack"
-	pickup.desc = "Gives two buffing cards"
+	pickup.name = "Booster Box"
+	pickup.desc = "Gives 5 buffing cards"
 	pickup.weight = 75
-	pickup.maxAmount = 10
+	pickup.maxAmount = 5
 	pickup.price = 20
-	pickup.tier = 2
+	pickup.tier = 3
 	pickup.spawnsIn = { relicPool.SHOP, relicPool.SECRET }
 end
 
@@ -15,6 +15,21 @@ function ADVR.onPickup()
 		Commondrop()
 	end
 	if helperMethods.IsValidWithLuck(.05, .65, .15) then
+		Raredrop()
+	else
+		Commondrop()
+	end
+	if helperMethods.IsValidWithLuck(.1, .75, .25) then
+		Raredrop()
+	else
+		Commondrop()
+	end
+	if helperMethods.IsValidWithLuck(.05, .65, .15) then
+		Raredrop()
+	else
+		Commondrop()
+	end
+	if helperMethods.IsValidWithLuck(.1, .75, .25) then
 		Raredrop()
 	else
 		Commondrop()
