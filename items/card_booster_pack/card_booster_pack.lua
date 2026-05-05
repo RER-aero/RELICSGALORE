@@ -1,7 +1,7 @@
 function ADVR.onLoad()
 	pickup.name = "Booster Pack"
 	pickup.desc = "Gives two buffing cards"
-	pickup.weight = 75
+	pickup.weight = 85
 	pickup.maxAmount = 10
 	pickup.price = 20
 	pickup.tier = 2

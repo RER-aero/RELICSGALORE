@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Pot Card"
-    pickup.desc = "Decreases Abberant spawn rates"
+    pickup.desc = "Gives Cash And Keys"
 	pickup.weight = 0
 	pickup.maxAmount = 3
 	pickup.price = 20
@@ -12,6 +12,6 @@ end
 
 function ADVR.onPickup()
 	pickup.RegisterItem()
-
-   player.ProbabilityForChampionEnemy = player.ProbabilityForChampionEnemy * .95
+ player.CurrentKeys = player.CurrentKeys +5
+   player.CurrentCashy = player.CurrentCash +15
 end
