@@ -1,11 +1,11 @@
 function ADVR.onLoad()
     pickup.name = "Pocket Black Hole"
-    pickup.desc = "Pulls enemies towards you"
+    pickup.desc = "Pulls enemies towards you when using a mark"
     pickup.weight = 35
     pickup.maxAmount = 1
     pickup.price = 80
     pickup.tier = 2
-    pickup.spawnsIn = { relicPool.SPECIAL, relicPool.SHOP, relicPool.BOSS }
+    pickup.spawnsIn = { relicPool.SPECIAL, relicPool.SACRIFICE, relicPool.SECRET }
     pickup.supportedInMultiplayer = true
 end
 
