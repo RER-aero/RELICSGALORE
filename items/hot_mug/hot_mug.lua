@@ -19,6 +19,7 @@ function ADVR.onFoodEaten()
     if helperMethods.IsValidWithLuck(.1, 1, .4) then
         local orb = game.SpawnObjectNetwork(objects.ITEM_ORB, game.playerController.rightHand.transform.position)
         orb.GetComponent_StartHoverWhenLowVelocity_().SetDistanceOverGround(1.1, 0)
+        audio.PlaySoundLocal(sounds.POTION_DRINK, game.playerController.rightHand.transform.position) 
     end
 
-end
+end 

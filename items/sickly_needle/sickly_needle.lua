@@ -2,10 +2,10 @@ function ADVR.onLoad()
     pickup.name = "Sickly Needle"
     pickup.desc = "Gambling will empower your next attack"
     pickup.weight = 55
-    pickup.maxAmount = 3
+    pickup.maxAmount = 1
     pickup.amountUses = -1
     pickup.price = 20
-    pickup.tier = 1
+    pickup.tier = 2
     pickup.spawnsIn = { relicPool.PODEST, relicPool.SHOP, relicPool.CHEST, relicPool.GOLDEN_CHEST }
     pickup.supportedInMultiplayer = true
     Empower = 0
