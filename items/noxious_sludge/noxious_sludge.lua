@@ -1,11 +1,11 @@
 function ADVR.onLoad()
 	pickup.name = "Noxious Sludge"
 	pickup.desc = "Eating food applies poison to nearby enemies"
-	pickup.weight = 75
+	pickup.weight = 85
 	pickup.maxAmount = 1
 	pickup.amountUses = -1
 	pickup.price = 30
-	pickup.tier = 3
+	pickup.tier = 2
 	pickup.spawnsIn = {relicPool.PODEST, relicPool.SHOP}
 	pickup.supportedInMultiplayer = true
 end
