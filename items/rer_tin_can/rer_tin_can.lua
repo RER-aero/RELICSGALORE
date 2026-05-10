@@ -1,7 +1,7 @@
 function ADVR.onLoad()
     pickup.name = "tin can"
     pickup.desc = "Being hit charges marks slightly"
-	pickup.weight = 80
+	pickup.weight = 90
 	pickup.maxAmount = 1
 	pickup.amountUses = -1
 	pickup.price = 30

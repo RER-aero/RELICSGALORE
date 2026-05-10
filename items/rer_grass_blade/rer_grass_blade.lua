@@ -44,7 +44,7 @@ function ADVR.onPickup()
 	
 end
 function ColorTrail(playerRef)
-	helperMethods.SetTrailColorRanged(playerRef, colors.Create(0.000, 1.000, 0.000, 0.102))
+	helperMethods.SetTrailColorMelee(playerRef, colors.Create(0.000, 1.000, 0.000, 0.102))
 
 end
 

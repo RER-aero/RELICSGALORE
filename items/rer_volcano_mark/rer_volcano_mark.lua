@@ -1,7 +1,7 @@
 function ADVR.onLoad()
     pickup.name = "Volcano Mark"
     pickup.desc = "When used, set all nearby enemies on fire"
-    pickup.weight = 75
+    pickup.weight = 80
     pickup.maxAmount = 1
     pickup.price = 30
     pickup.amountUses = 12

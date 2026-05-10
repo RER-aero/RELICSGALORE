@@ -15,7 +15,7 @@ function ADVR.onPickup()
 end
 
 function ADVR.onSwordSwing(velocity)
-    if helperMethods.IsValidWithLuck(.10, .90, .350) then
+    if helperMethods.IsValidWithLuck(.10, .90, .35) then
         local enemies = game.GetEnemiesInRadius(10, game.playerController.rightHand.transform.position, false, true)
 
         local closestEnemy = nil
@@ -61,7 +61,7 @@ function ADVR.onSwordSwing(velocity)
 
             -- move projectile towards the enemy --
             local endPos = endEnemy.GetCenterInWorld()
-            local t = elapsed / (duration / 6)
+            local t = elapsed / (duration / 3)
             projectile.transform.position = vector3.Lerp(startPos, endPos, t)
 
             elapsed = elapsed + time.deltaTime
@@ -69,7 +69,7 @@ function ADVR.onSwordSwing(velocity)
         end
 
         if projectile ~= nil then
-            endEnemy.DoHit(player.networkObject, player.PrimaryDamage.GetValueFloat() * 0.5)
+            endEnemy.DoHit(player.networkObject, player.PrimaryDamage.GetValueFloat() * 1.5)
             game.Delete(projectile)
         end
     end
