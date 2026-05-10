@@ -1,7 +1,7 @@
 function ADVR.onLoad()
     pickup.name = "Acceptance Letter"
     pickup.desc = "Chance to gain or lose a heart container"
-	pickup.weight = 80
+	pickup.weight = 90
 	pickup.tier = 2
 	pickup.maxAmount = 10
 	pickup.amountUses = -1

@@ -12,8 +12,13 @@ end
 
 function ADVR.onPickup()
     pickup.RegisterItem()
-    if game.itemInterpreter.currentUsable ~= nil then
+  
+end
+
+function ADVR.onPickupTaken(itemUpgrade)
+  if game.itemInterpreter.currentUsable ~= nil and not itemUpgrade.IsInInventory()  then
         game.itemInterpreter.currentUsable.currentCharge = game.itemInterpreter.currentUsable.currentCharge + 3
         game.activePickupSlot.UpdateChargeDisplay()
     end
+
 end

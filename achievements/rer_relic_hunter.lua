@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-	achievement.name = "Relic Hunter
+	achievement.name = "Relic Hunter"
 	achievement.desc = "Discover every item from RELICSGALORE"
 	achievement.hideDescription = false
 	achievement.category = "exploration"
@@ -7,7 +7,7 @@ function ADVR.onLoad()
 	achievement.showProgressBar = true
 	RelicsList = {}
 	for pick in game.itemInterpreter.pickupsOnDisk do
-		if string.match(pick.id, "rer_[ct]%d+_") then
+		if string.match(pick.id, "rer_") then
 			table.insert(RelicsList, pick.id)
 		end
 	end
