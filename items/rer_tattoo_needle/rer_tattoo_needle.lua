@@ -14,7 +14,7 @@ pickup.RegisterItem()
 helperMethods.RegisterRangedDamageAddend(pickup.id, 5)
 end
 
-function ADVR.onPickupActivate()
+function ADVR.onPreMarkTriggered()
 player.DamagePlayer(1, false)
 end
 
