@@ -1,7 +1,7 @@
 
 function ADVR.onLoad()
 	pickup.name = "Wooden Spike"
-    pickup.desc = "Increase all personal stats greatly, but every time you are hit will decrease a personal stat"
+    pickup.desc = "Increase all personal stats greatly, but gettin hit will decrease your stats"
 	pickup.weight = 78
 	pickup.maxAmount = 1
 	pickup.price = 35
