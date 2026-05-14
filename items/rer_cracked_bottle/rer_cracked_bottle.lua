@@ -1,6 +1,6 @@
 function ADVR.onLoad()
 	pickup.name = "Cracked Bottle"
-	pickup.desc = "Periodically release glass shards"
+	pickup.desc = "Release glass shards when hit"
 	pickup.weight = 75
 	pickup.tier = 3
 	pickup.maxAmount = 1

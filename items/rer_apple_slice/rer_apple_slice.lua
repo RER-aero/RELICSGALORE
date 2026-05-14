@@ -1,7 +1,7 @@
 function ADVR.onLoad()
     pickup.name = "Apple Slice"
     pickup.desc = "Eating food will give some speed"
-	pickup.weight = 80
+	pickup.weight = 90
 	pickup.tier = 2
 	pickup.maxAmount = 10
 	pickup.amountUses = -1
