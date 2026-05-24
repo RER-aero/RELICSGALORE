@@ -9,20 +9,24 @@ function ADVR.onLoad()
 	pickup.spawnsIn = {relicPool.PODEST, relicPool.SHOP}
 	pickup.supportedInMultiplayer = true
 end
-local hasMark = 0
+local hasMark = false
 
 
 function ADVR.onPickup()
 	pickup.RegisterItem()
+ if game.itemInterpreter.currentUsable ~= nil then
+	  helperMethods.RegisterMeleeDamageAddend(pickup.id, 2)
+	  hasMark = true
+    end
 
-end
+ end
 
 
 
 function ADVR.onPickupTaken(itemUpgrade) 
-    if string.match(itemUpgrade.name, "mark") and hasMark == 0 then
-        hasMark = 1
-     helperMethods.RegisterMeleeDamageAddend(pickup.id, 1)
+    if string.match(itemUpgrade.name, "mark") and hasMark == false then
+        hasMark = true
+     helperMethods.RegisterMeleeDamageAddend(pickup.id, 2)
     end
 end
 

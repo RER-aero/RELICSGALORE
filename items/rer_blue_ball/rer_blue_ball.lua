@@ -19,7 +19,7 @@ end
 
 function ADVR.onRoomEntered(room)
       if  not TookDamageInRoom then
-        player.CurrentKeys = player.CurrentKeys + math.random(2, 5)
+        player.CurrentKeys = player.CurrentKeys + 1
     end
     TookDamageInRoom = false
 end

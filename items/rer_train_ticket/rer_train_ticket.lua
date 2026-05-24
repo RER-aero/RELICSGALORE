@@ -40,5 +40,4 @@ function ADVR.onAfterBossAreaGenerated(worldGenerator)
             textResult = textResult .. "\n"
         end
     end
-    game.ShowMessageInWorld(textResult, 4)
 end
