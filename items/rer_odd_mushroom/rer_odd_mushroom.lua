@@ -14,18 +14,20 @@ function ADVR.onPickup()
 end
 
 function ADVR.onPlayerHit(damage, damageSource, receivedDamageType, hitPosition, isStatsProbe)
-    if helperMethods.IsValidWithLuck(.15, .9, .35) then
-        local cloud = game.SpawnObjectLocal(objects.EFFECT_POISONOUS_GAS,
-            game.playerController.rightHand.transform.position)
-        cloud.transform.localScale = vector3.__new(2, 2, 2)
-        local dmgArea = cloud.GetComponent_DamageArea_()
-        dmgArea.playerImmune = true
+    if not isStatsProbe then
+        if helperMethods.IsValidWithLuck(.15, .9, .35) then
+            local cloud = game.SpawnObjectLocal(objects.EFFECT_POISONOUS_GAS,
+                game.playerController.rightHand.transform.position)
+            cloud.transform.localScale = vector3.__new(2, 2, 2)
+            local dmgArea = cloud.GetComponent_DamageArea_()
+            dmgArea.playerImmune = true
 
 
-        dmgArea.enemiesImmune = false
-        dmgArea.damage = (player.SecondaryDamage.GetValueFloat()) * 0.4
+            dmgArea.enemiesImmune = false
+            dmgArea.damage = (player.SecondaryDamage.GetValueFloat()) * 0.4
+        end
+
+
+        return damage
     end
-
-
-    return damage
 end

@@ -11,7 +11,8 @@ end
 
 function ADVR.onPickup()
     pickup.RegisterItem()
-    player.MaxHealth = player.MaxHealth - 1
+    player.MaxHealth = player.MaxHealth - 2
+    player.Health = player.Health - 2
 end
 
 function ADVR.onPlayerValueChanged(statID)
