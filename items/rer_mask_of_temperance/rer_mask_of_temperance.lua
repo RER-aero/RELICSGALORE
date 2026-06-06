@@ -14,7 +14,8 @@ end
 function ADVR.onPickup()
     pickup.RegisterItem()
      player.MaxHealth = player.MaxHealth - 2
-    player.Health = player.Health - 2
+    player.Health = math.max(0, math.min(player.MaxHealth, player.Health))
+		
     
 	FoodProperties = {
 		[objects.ITEM_FOOD_DRAGONFRUIT] = { upgrades = 6},

@@ -1,6 +1,6 @@
 
 function ADVR.onLoad()
-    pickup.name = "Explosive compound"
+    pickup.name = "Explosive Compound"
     pickup.desc = "Melee attacks cause an explosion, but melee damage is decreased"
     pickup.weight = 45
     pickup.maxAmount = 1
@@ -14,7 +14,7 @@ end
 
 function ADVR.onPickup()
     pickup.RegisterItem()
-    helperMethods.RegisterMeleeDamageAddMult(pickup.id, 1, -1.8)
+    helperMethods.RegisterMeleeDamageAddMult(pickup.id, 1, .8)
 end
 
 

@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-    pickup.name = "Green Card"
+    pickup.name = "Orange Card"
     pickup.desc = "Increases Evasion"
 	pickup.weight = 0
 	pickup.maxAmount = 3

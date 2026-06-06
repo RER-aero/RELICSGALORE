@@ -16,7 +16,7 @@ function ADVR.onPickup()
 end
 
 function ADVR.onWeaponHitEntity(infos)
-	if infos.entity:IsEnemy() then
+	if infos.entity.IsEnemy() then
 		AddDmg = AddDmg + 1
 		return infos.damage + AddDmg
 	else

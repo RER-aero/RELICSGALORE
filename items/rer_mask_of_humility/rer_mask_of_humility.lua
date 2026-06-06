@@ -13,7 +13,8 @@ end
 function ADVR.onPickup()
     pickup.RegisterItem()
        player.MaxHealth = player.MaxHealth - 2
-    player.Health = player.Health - 2
+   player.Health = math.max(0, math.min(player.MaxHealth, player.Health))
+		
 end
 
 function ADVR.onPlayerHit(damage, damageSource, receivedDamageType, hitPosition, isStatsProbe)
