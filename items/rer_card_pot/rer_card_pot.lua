@@ -13,5 +13,5 @@ end
 function ADVR.onPickup()
 	pickup.RegisterItem()
  player.CurrentKeys = player.CurrentKeys +5
-   player.CurrentCashy = player.CurrentCash +15
+   player.CurrentCash = player.CurrentCash +15
 end

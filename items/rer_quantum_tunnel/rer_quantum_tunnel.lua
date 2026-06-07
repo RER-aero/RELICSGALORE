@@ -1,5 +1,5 @@
 function ADVR.onLoad()
-	pickup.name = "Quantun Tunnel"
+	pickup.name = "Quantum Tunnel"
 	pickup.desc = "Increases all stats very greatly, but relics and food will no longer spawn"
 	pickup.weight = 66
 	pickup.maxAmount = 1
@@ -9,6 +9,7 @@ function ADVR.onLoad()
 	pickup.spawnsIn = {relicPool.PODEST, relicPool.SHOP, relicPool.SACRIFICE, relicPool.BOSS, relicPool.SPECIAL, relicPool.SECRET}
 	pickup.supportedInMultiplayer = true
       pickup.AddPreObjectSpawnListenersRuntimeByStrings({objects.ITEM_FOOD_DRAGONFRUIT, objects.ITEM_FOOD_STEAK, objects.ITEM_FOOD_APPLE, objects.ITEM_FOOD_PEAR, objects.ITEM_FOOD_CHEESE, objects.ITEM_FOOD_CHICKEN, objects.ITEM_FOOD_ORANGE, objects.ITEM_FOOD_PLUM})
+	  pickup.preObjectSpawnListeners = {game.stringToObjectMapper.GetObject(objects.ITEM_UPGRADE_ALL)}
 end
 
 function ADVR.onPickup()

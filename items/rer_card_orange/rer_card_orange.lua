@@ -12,6 +12,6 @@ end
 
 function ADVR.onPickup()
 	pickup.RegisterItem()
-
+	player.EvasionChance.RegisterAddend(pickup.id, .05)
     player.EvasionChance.RegisterMultiplier(pickup.id, 1.2)
 end

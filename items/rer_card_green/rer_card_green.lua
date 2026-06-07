@@ -12,6 +12,6 @@ end
 
 function ADVR.onPickup()
 	pickup.RegisterItem()
-      player.Luck.RegisterAddend(pickup.id, .1)
+    player.Luck.RegisterAddend(pickup.id, .05)
     player.Luck.RegisterMultiplier(pickup.id, 1.2)
 end

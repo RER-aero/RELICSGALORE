@@ -12,6 +12,7 @@ end
 
 function ADVR.onPickup()
 	pickup.RegisterItem()
+	player.ShopDiscount.RegisterAddend(pickup.id, .05)
     player.ShopDiscount.RegisterMultiplier(pickup.id, 1.15)
     
 end

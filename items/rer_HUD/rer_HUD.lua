@@ -12,23 +12,13 @@ end
 
 function ADVR.onPickup()
     pickup.RegisterItem()
+     player.PrimaryDamage.RegisterAddend(pickup.id, 0)
+     player.SecondaryDamage.RegisterAddend(pickup.id, 0)
 end
 
 function ADVR.onRoomEntered()
     Enemies = game.GetEnemiesInRadius(15, player.transform.position, false, false)
-    Dih = #Enemies
+    player.PrimaryDamage.ChangeAddend(pickup.id, #Enemies)
+     player.SecondaryDamage.ChangeAddend(pickup.id, #Enemies)
 end
 
-function ADVR.onPrimaryHitEntity(infos)
-    if not Dih == 0 then
-    return infos.damage + math.ceil(Dih * 1.25)
-    end
-    return infos.damage
-end
-
-function ADVR.onSecondaryHitEntity(infos)
-     if not Dih == 0 then
-    return infos.damage + math.ceil(Dih * 1.25)
-     end
-     return infos.damage
-end

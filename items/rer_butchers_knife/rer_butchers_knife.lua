@@ -1,6 +1,6 @@
 function ADVR.onLoad()
     pickup.name = "Butchers Knife"
-    pickup.desc = "All of your current and future bone related relics increase your melee damage by 1"
+    pickup.desc = "All of your future bone related relics increase your melee damage by 2"
     pickup.weight = 65
     pickup.maxAmount = 1
     pickup.price = 35
@@ -9,34 +9,33 @@ function ADVR.onLoad()
     pickup.supportedInMultiplayer = true
 end
 
-RelicsToCheck = {
-    relics.BONE_DICE,
+
+function ADVR.onPickup()
+	pickup.RegisterItem()
+	
+end
+
+function ADVR.onPickupTaken(itemUpgrade)
+	local relicsToCheck = {
+	 relics.BONE_DICE,
     relics.BLUNTED_KNUCKLEBONE,
     relics.PACKRAT_MANDIBLE,
     relics.ASCETICS_MARK,
     relics.GOLD_TOOTH,
 }
-function ADVR.onPickup()
-    pickup.RegisterItem()
-
-
-    local count = 0
-    local items = game.itemInterpreter.GetActivePickupsFromAllPlayers()
-    for i = 1, #RelicsToCheck do
-        for j = 1, #RelicsToCheck do
-            if items[i] == RelicsToCheck[j] then
-                count = count + 1
-            end
-        end
-
-        helperMethods.RegisterMeleeDamageAddend(pickup.id, count)
-    end
+	if not table.contains(relicsToCheck, itemUpgrade.rolledItem.id) then
+		
+		return
+	end
+	
+	helperMethods.RegisterMeleeDamageAddend(pickup.id, 2)
 end
 
-function ADVR.onPickupTaken(itemUpgrade)
-    for i = 1, #RelicsToCheck do
-        if itemUpgrade == RelicsToCheck[i] then
-            helperMethods.RegisterMeleeDamageAddend(pickup.id, 1)
-        end
-    end
+function table.contains(tbl, val)
+	for _, v in ipairs(tbl) do
+		if v == val then
+			return true
+		end
+	end
+	return false
 end
