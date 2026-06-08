@@ -6,29 +6,41 @@ function ADVR.onLoad()
     pickup.amountUses = -1
     pickup.price = 30
     pickup.tier = 3
-    pickup.spawnsIn = {relicPool.SPECIAL, relicPool.SHOP, relicPool.PODEST}
+    pickup.spawnsIn = { relicPool.SPECIAL, relicPool.SHOP, relicPool.PODEST }
     pickup.supportedInMultiplayer = true
-
-   
+    pickup.isVanishItem = true
 end
 
 function ADVR.onPickup()
     pickup.RegisterItem()
-   
-	player.PrimaryDamage.RegisterAddend(pickup.id, 4)
-	player.PrimaryDamage.RegisterMultiplier(pickup.id, 1.2)
-	player.PrimaryCritChance.RegisterAddend(pickup.id, 0.15)
-	player.SecondaryCritChance.RegisterAddend(pickup.id, 0.15)
-	player.SecondaryDamage.RegisterAddend(pickup.id, 2)
-	player.EvasionChance.RegisterAddend(pickup.id, 0.15)
-end
 
+    player.PrimaryDamage.RegisterAddend(pickup.id, 4)
+    player.PrimaryDamage.RegisterMultiplier(pickup.id, 1.2)
+    player.PrimaryCritChance.RegisterAddend(pickup.id, 0.15)
+    player.SecondaryCritChance.RegisterAddend(pickup.id, 0.15)
+    player.SecondaryDamage.RegisterAddend(pickup.id, 2)
+    player.EvasionChance.RegisterAddend(pickup.id, 0.15)
+end
 
 function ADVR.onPlayerHit(damage, damageSource, receivedDamageType, hitPosition, isStatsProbe)
     if isStatsProbe then
         return damage
     end
- player.MoveSpeed.RegisterMultiplier(pickup.id, -1)
+    player.MoveSpeed.RegisterMultiplier(pickup.id, -1)
     return damage
 end
 
+function ADVR.onPlayerDeath()
+    pickup.UnregisterItem()
+    
+
+	player.PrimaryDamage.ClearMultiplier(pickup.id)
+    player.PrimaryDamage.ClearAddend(pickup.id)
+	player.SecondaryDamage.ClearMultiplier(pickup.id)
+    player.PrimaryCritChance.ClearAddend(pickup.id)
+    player.SecondaryCritChance.ClearAddend(pickup.id)
+    player.EvasionChance.ClearAddend(pickup.id)
+
+	player.MaxHealth = OldMaxHealth
+
+end
