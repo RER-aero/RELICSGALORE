@@ -22,6 +22,7 @@ function ADVR.onMeleeHitEntity(hitInfos)
 		damageArea.playerImmune = true
 		damageArea.damageMode = damageMode.ALL_OBJECTS
 		damageArea.damage = player.SecondaryDamage.GetValueFloat()
+		damageArea.damageIntervall = .5
 	end
 	return hitInfos.damage
 end
